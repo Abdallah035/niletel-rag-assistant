@@ -27,12 +27,28 @@
 
 ### Demo
 
-> _Drop your screenshots into [docs/screenshots/](docs/screenshots/) using
-> the filenames below. They'll render automatically here._
+#### 💬 Chat UI in action
+The streaming chat with the branded NileTel theme — sample chips, a
+typing indicator, sources expander, per-message badges (intent / tier /
+latency), and full RTL Arabic rendering with bold technical terms
+auto-highlighted by the LLM.
 
-![Chat UI – greeting + RAG answer](docs/screenshots/chat-rag.png)
+![Chat UI — streaming answer with sources and badges](docs/screenshots/demo.png)
 
-![Ticket creation – pink card after a complaint](docs/screenshots/chat-ticket.png)
+#### 🎫 Ticket creation
+When the router detects a complaint, the FastAPI POSTs to n8n. n8n logs
+the ticket in Google Sheets, emails the customer + the support team, and
+returns the real ticket ID — which renders as a stylish pink card below
+the answer.
+
+![Ticket created — pink card with real ID, sheet link, and email status](docs/screenshots/ticket.png)
+
+#### 🔀 n8n workflow
+The seven-node workflow that backs ticket automation: webhook → field
+generation → Google Sheet append → support email → conditional customer
+email → respond-to-webhook with the ticket ID.
+
+![n8n workflow — Webhook → Edit Fields → Sheets → Email_us → If → Email Customer → Respond](docs/screenshots/n8n.png)
 
 ---
 
