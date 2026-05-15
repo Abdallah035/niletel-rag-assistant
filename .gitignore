@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Generated artifacts (FAISS index, BM25 corpus, model caches)
+artifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups from preprocessing scripts
+*.bak
+
+# Lock from uv (keep) and ad-hoc scratch files
+_*.py
+_*.txt
